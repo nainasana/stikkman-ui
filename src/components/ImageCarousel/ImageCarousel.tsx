@@ -34,7 +34,7 @@ export default function ImageCarousel() {
   };
 
   useEffect(() => {
-    scrollToImage(currentIndex);
+    scrollToImage(1);
   }, []);
 
   const scrollLeft = () => {
