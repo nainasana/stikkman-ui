@@ -69,40 +69,36 @@ const SukoonVillaPage: React.FC = () => {
       {/* Detail View Overlay */}
       {showDetailView && (
         <div 
-          className={`fixed inset-0 z-50 transition-all duration-1000 ease-out ${
-            showDetailView 
-              ? 'opacity-100 translate-y-0 scale-100 rotate-0' 
-              : 'opacity-0 translate-y-full scale-95 rotate-1'
-          }`}
+          className="fixed inset-0 z-50 animate-zoomIn"
           style={{
             backgroundImage: `url(${process.env.PUBLIC_URL}/bg.jpg)`,
             backgroundSize: 'cover',
             backgroundPosition: 'center',
-            transformOrigin: 'center bottom'
+            transformOrigin: 'top left',
+            animation: 'zoomInFromCorner 0.8s ease-out forwards'
           }}
         >
           <div 
             className={`relative w-full h-full flex flex-col transition-all duration-1200 ease-out delay-200 ${
               showDetailView 
-                ? 'translate-y-0 scale-100' 
-                : 'translate-y-8 scale-98'
+                ? 'translate-x-0 translate-y-0 scale-100' 
+                : 'translate-x-8 translate-y-8 scale-95'
             }`}
           >
             {/* Background Image - 3/4 of screen on desktop, 2/3 on mobile */}
             <div 
               className={`relative h-2/3 md:h-3/4 w-full transition-all duration-1000 ease-out delay-300 ${
                 showDetailView 
-                  ? 'translate-x-0 opacity-100 scale-100' 
-                  : 'translate-x-8 opacity-0 scale-95'
+                  ? 'translate-x-0 translate-y-0 opacity-100 scale-100' 
+                  : 'translate-x-12 translate-y-12 opacity-0 scale-90'
               }`}
             >
               <img 
-                src={`${process.env.PUBLIC_URL}/sukoonvilla.jpg`}
+                src="/s1.jpg"
                 alt="Sukoon Villa Detail"
                 className="w-full h-full object-cover transition-transform duration-1200 ease-out"
                 style={{
-                  borderBottomLeftRadius: '150px',
-                  borderTopLeftRadius: '15px'
+                  borderBottomLeftRadius: '150px'
                 }}
               />
               
@@ -131,8 +127,8 @@ const SukoonVillaPage: React.FC = () => {
             <div 
               className={`h-1/3 md:h-1/4 w-full transition-all duration-1000 ease-out delay-400 ${
                 showDetailView 
-                  ? 'translate-y-0 opacity-100' 
-                  : 'translate-y-12 opacity-0'
+                  ? 'translate-x-0 translate-y-0 opacity-100' 
+                  : 'translate-x-12 translate-y-12 opacity-0'
               }`}
             >
               {/* Main content area */}
@@ -329,7 +325,7 @@ const SukoonVillaPage: React.FC = () => {
           >
             <div className="overflow-hidden shadow-2xl hover:shadow-3xl transition-shadow duration-300">
               <img 
-                src={`${process.env.PUBLIC_URL}/sukoonvilla.jpg`}
+                src="/s1.jpg"
                 alt="Sukoon Villa at Night"
                 className="w-80 sm:w-96 md:w-[500px] lg:w-[600px] h-56 sm:h-64 md:h-80 lg:h-96 object-cover hover:scale-105 transition-transform duration-500"
               />
@@ -338,7 +334,7 @@ const SukoonVillaPage: React.FC = () => {
 
           {/* Action buttons */}
           <div 
-            className="flex flex-col sm:flex-row space-y-3 sm:space-y-0 sm:space-x-4 mt-8 transition-all duration-700 ease-out"
+            className="flex flex-col sm:flex-row space-y-3 sm:space-y-0 sm:space-x-4 mb-24 transition-all duration-700 ease-out"
             style={{
               opacity: Math.max(0.3, 1 - scrollProgress * 0.5),
               transform: `translateY(${scrollProgress * 30}px)`
