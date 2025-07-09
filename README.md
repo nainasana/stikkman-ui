@@ -24,7 +24,7 @@ A modern, responsive React application showcasing smooth animations and interact
 1. Clone the repository:
 ```bash
 git clone <repository-url>
-cd stikkman-ux-task
+cd frontend-stikkman
 ```
 
 2. Install dependencies:
