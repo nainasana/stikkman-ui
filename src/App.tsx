@@ -1,5 +1,5 @@
 import "./index.css";
-import { BrowserRouter as Router, Route, Routes, useNavigate } from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import SukoonVillaPage from "./SukoonVillaPage"
 import HomePage from "./components/HomePage/HomePage";
 
