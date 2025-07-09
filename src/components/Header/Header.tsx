@@ -15,10 +15,10 @@ export default function Header() {
       <Link to="/sukoon-villa" className="logo">StikkmanUX</Link>
 
       <nav className={`main-nav ${menuOpen ? "open" : ""}`}>
-        <a>Projects</a>
-        <a>Careers</a>
-        <a>Services</a>
-        <a>Contact Us</a>
+        <Link to="#">Projects</Link>
+        <Link to="#">Careers</Link>
+        <Link to="#">Services</Link>
+        <Link to="#">Contact Us</Link>
       </nav>
 
       <div className="hamburger" onClick={toggleMenu}>
